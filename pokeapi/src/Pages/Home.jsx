@@ -2,7 +2,11 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <h1>Home</h1>
+    <div className="flex justify-center">
+      <div className="text-4xl font-bold">
+        <img className="w-64 h-auto" src="https://cdn.worldvectorlogo.com/logos/pokemon-23.svg" alt="Logo" />
+      </div>
+    </div>
   )
 }
 
