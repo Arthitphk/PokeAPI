@@ -1,12 +1,16 @@
-import React from 'react'
+
 import { Logo } from '../Component/Logo'
 import { Card } from '../Component/Card'
 
-const Home = () => {
+const Home = ({pokemondata}) => {
+
+
+  
+
   return (
     <div>
       <Logo />
-      <Card />
+      <Card pokemondata={pokemondata} />
     </div>
   )
 }

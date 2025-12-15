@@ -1,6 +1,22 @@
-import React from 'react'
+import axios from 'axios';
+import { useEffect, useState } from "react";  
 
 export const Card = () => {
+
+    const [pokemondata, setPokemondata] = useState([]);
+
+    axios.get('https://pokeapi.co/api/v2/pokemon/1/')
+    .then((response) => {
+        setPokemondata(response.data);
+    }   )
+    .catch((error) => {
+        console.log(error);
+    });
+
+
+    console.log(pokemondata);
+
+
   return (
     <div className="flex flex-wrap gap-4 justify-center p-4">
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
